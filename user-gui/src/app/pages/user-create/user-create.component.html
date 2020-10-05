@@ -1,0 +1,89 @@
+
+<form class="p-grid p-col-12" [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+    <p-message></p-message>
+    <div class="p-grid p-col-4 card">
+        <div class="p-col-12" style="font-size: 30px;color: white;font-weight: bolder; font-family: Verdana, Geneva, Tahoma, sans-serif;">Informações pessoais</div>
+        <div class="p-field p-col-7" style="padding: 10px;">
+            <label class="p-col-12" for="name">Nome Completo*</label>
+            <input id="name" formControlName="name" type="text" pInputText> 
+        </div>
+        
+        <div class="p-field p-col-4" style="padding: 10px;">
+            <label class="p-col-12" for="cpf">CPF*</label>
+            <input id="cpf" formControlName="cpf" [brmasker]="{ mask: '000.000.000-00', type: 'num' }" placeholder="000.000.000-00" maxlength="14" type="text" pInputText>
+            <br/>
+            <small style="color: red; font-size: medium;">{{duplicatedCpf}}</small>
+        </div>
+        
+        <div class="p-field p-col-4" style="padding: 10px;">
+            <label class="p-col-12" for="gender">Gênero</label>
+            <p-dropdown [options]="genders" formControlName="gender"></p-dropdown>
+        </div>
+        
+        <div class="p-field p-col-5" style="padding: 10px;">
+            <label class="p-col-12" for="birthDate">Data de Nascimento*</label>
+            <p-calendar id="birthDate" dateFormat="dd/mm/yy" formControlName="birthDate"></p-calendar>
+        </div>
+    </div>
+
+    <div class="p-grid p-col-3 card">
+        <div class="p-col-12" style="font-size: 30px;color: white;font-weight: bolder;font-family: Verdana, Geneva, Tahoma, sans-serif;">Contato</div>
+        <div class="p-field p-col-12" style="padding: 10px;">
+            <label class="p-col-12" for="email">Email*</label>
+            <input id="email" formControlName="email" type="email" pInputText>
+            <small style="color: red; font-size: medium;">{{duplicatedEmail}}</small>
+        </div>
+
+        <div class="p-field p-col-2" style="padding: 10px;">
+            <label class="p-col-12" for="ddd">DDD*</label>
+            <input id="ddd" [brmasker]="{mask: '00', type:'num'}" maxlength="2" formControlName="ddd" type="text" pInputText> 
+        </div>
+        
+        <div class="p-field p-col-10" style="padding: 10px;">
+            <label class="p-col-12" for="phoneNumber">Número*</label>
+            <input id="phoneNumber" [brmasker]="{mask: '00000-0000', type:'num'}" maxlength="10" formControlName="phoneNumber" type="text" pInputText> 
+        </div>
+    </div>
+
+    <div class="p-grid p-col-7 card">
+        <div class="p-col-12" style="font-size: 30px;color: white;font-weight: bolder;font-family: Verdana, Geneva, Tahoma, sans-serif;">Endereço</div>
+        
+        <div class="p-field p-col-2" style="padding: 10px;">
+            <label class="p-col-4" for="cep">CEP*</label>
+            <input id="cep" [brmasker]="{mask: '00000-000', type:'num'}" maxlength="9" formControlName="cep" type="text" pInputText> 
+        </div>
+        
+        <div class="p-field p-col-6" style="padding: 10px;">
+            <label class="p-col-12" for="street">Rua*</label>
+            <input id="street" formControlName="street" type="text" pInputText> 
+        </div>
+        
+        <div class="p-field p-col-2" style="padding: 10px;">
+            <label class="p-col-12" for="street">Número*</label>
+            <input id="number" formControlName="number" type="text" pInputText> 
+        </div>
+
+        <div class="p-field p-col-2" style="padding: 10px;">
+            <label class="p-col-12" for="neighborhood">Bairro*</label>
+            <input id="neighborhood" formControlName="neighborhood" type="text" pInputText> 
+        </div>
+        
+        <div class="p-field p-col-6" style="padding: 10px;">
+            <label class="p-col-12" for="complement">Complemento</label>
+            <input id="complement" formControlName="complement" type="text" pInputText> 
+        </div>
+        
+        <div class="p-field p-col-2" style="padding: 10px;">
+            <label class="p-col-12" for="city">Cidade*</label>
+            <input id="city" formControlName="city" type="text" pInputText> 
+        </div>
+        
+        <div class="p-field p-col-2" style="padding: 10px;">
+            <label class="p-col-12" for="state">Estado*</label>
+            <input id="state" formControlName="state" type="text" pInputText> 
+        </div>
+    </div>
+    <div class="p-col-7" style="text-align: right;">
+        <button type="submit" [style.background-color]="userForm.invalid ? 'gray' : '#193181'" [disabled]="userForm.invalid">Criar Conta</button>
+    </div>
+</form>

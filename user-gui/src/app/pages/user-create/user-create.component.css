@@ -1,0 +1,35 @@
+.card {
+    background-color: #6075B7;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+}
+
+input {
+    width: 100%;
+    border-radius: 10px; 
+    height: 40px;
+    padding: 5px;
+}
+
+input[type='text'] { 
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label {
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+button {
+    height: 60px;
+    width: 130px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+}
