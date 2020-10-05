@@ -1,0 +1,39 @@
+1. A solução deve ser disponibilizada em Cloud ou On-premise?
+R: Acredito que a melhor opção seja em Cloud, pelos seguintes motivos:
+    - A natureza do problema apresentado exige alta disponilidade, já que se tratam de "múltiplos canais de comunicação"
+    e imagino que escalabilidade já que se trata de um contexto de crescimento rápido como o da empresa em questão. 
+    Isso pode ser alcançado On-premise, mas é extremamente mais caro em infraestrutura e pessoal para manter, enquanto que uma 
+    solução em Cloud terceiriza esse trabalho para empresas gigantes como Google, Microsoft ou Amazon.
+    - No contexto atual eu só vejo como necessário uma solução On-premise em contextos específicos em que a empresa não só possui
+    os recursos necessários para manter toda essa infraestrutura, mas também necessita de total controle sobre cada aspecto de
+    seus sistemas (desde o hardware até o software), talvez um Banco grande que possui recursos virtualmente infinitos 
+    e uma massa de dados bem sensíveis de seus clientes. Outro cenário que necessitaria de On-premise, poderia ser uma solução 
+    local que será utilizada apenas em um ambiente definido e que não deve de nenhuma forma depender da internet.
+
+2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa
+solução, responda qual ferramenta acreditas ser apropriada para o controle de
+tarefas da equipe, a ferramenta é ágil?
+R: **Apenas um comentário** eu particularmente, na minha não tão vasta experiência confio mais em pessoas do que ferramentas. 
+Mas se eu tivesse que escolher, usaria o Trello, pela simplicidade de começar a usar e a forma genérica que permite criar os
+nossos próprios processos. Mas como eu comentei, nas mãos certas, acredito que um quadro com Post-its já seja suficiente, desde
+que seja sempre feito um bom trabalho de elicitação de requisitos e documentação antes de definir as tarefas propriamente ditas. 
+E claro, o time precisa concordar para que a ferramenta não fique de lado durante o projeto.
+
+3. Você se sente capaz de liderar esta equipe? Por quê?
+R: Sim, não tive a experiência de liderar uma equipe em um projeto no mercado, mas acredito que tenho as habilidades técnicas para
+liderar o projeto e costumo não ter problemas em trabalhar em equipe. Tenho que melhorar minha assertividade e passar mais confiança 
+para o time, mas a prática seria perfeita para que eu melhorasse esse ponto e seria um desafio interessantíssimo.
+
+4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria?
+R: Essa pergunta me deixou confuso pois não sei se está se referindo a melhorias no processo seletivo ou se fala de melhorias na
+minha solução do teste.
+- Falando do processo seletivo, eu gostei bastante do teste, foi um pouco cansativo, mas sinto que foi bem produtivo.
+- Falando da minha solução, aqui vão algumas coisas que eu queria adicionar mas o tempo não permitiu:
+    - Eu gostaria de ter feito maior validação e tratamento de erros;
+    - Adicionar CI (Continuous Integration) com Github + CircleCI;
+    - Eu acho que um protótipo de aplicativo com a criação de usuário seria interessante para demonstrar os múltiplos canais
+        de comunicação com o clientes;
+
+5. Acha válido esse desafio para o processo que está participando?
+R: Acredito que sim, o desafio possui um bom nível de especificações, mas deixando muitos aspectos para que a gente decida,
+essa liberdade permite que justamente a tomada de descisão faça parte do teste e eu gostei disso.
