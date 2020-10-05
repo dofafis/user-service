@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+    postgres:
+        image: postgres:9.6
+        restart: always
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_USER: dev
+            POSTGRES_PASSWORD: hJVIROjdenc3JDha
+            POSTGRES_DB: dev_user_api_db
+    user-api:
+        build: 
+            context: ../
+            dockerfile: ./tests/Dockerfile
+        command: npm run test
+        depends_on:
+            - postgres

@@ -1,0 +1,16 @@
+import { HttpStatus } from "@nestjs/common";
+
+export enum UserErrorType {
+    USER_PERSISTENCY_ERROR = 'USER_PERSISTENCY_ERROR',
+    USER_DUPLICATE_CPF = 'USER_DUPLICATE_CPF',
+    USER_DUPLICATE_EMAIL = 'USER_DUPLICATE_EMAIL',
+    PHONE_PERSISTENCY_ERROR = 'PHONE_PERSISTENCY_ERROR',
+    ADDRESS_PERSISTENCY_ERROR = 'ADDRESS_PERSISTENCY_ERROR',
+    USER_NOT_FOUND = 'USER_NOT_FOUND',
+    USER_FETCH_INTERNAL_ERROR = 'USER_FETCH_INTERNAL_ERROR',
+}
+
+export interface UserError {
+    status: HttpStatus
+    message: UserErrorType
+}

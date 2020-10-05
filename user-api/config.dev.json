@@ -1,0 +1,9 @@
+{
+    "apiName": "[DEV] User API",
+    "postgres": {
+        "host": "postgres",
+        "username": "dev",
+        "password": "hJVIROjdenc3JDha",
+        "database": "dev_user_api_db"
+    }
+}
