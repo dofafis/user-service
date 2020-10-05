@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  # user-gui:
+  #   build: ../user-gui/
+  user-api:
+    build: ../user-api/
+    command: npm run start:prod
+    ports:
+      - 3020:3020
+    depends_on:
+      - postgres
+    environment:
+      NODE_ENV: dev
+      PORT: 3020
+  postgres:
+    image: postgres:9.6
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: hJVIROjdenc3JDha
+      POSTGRES_DB: dev_user_api_db
+  user-gui:
+    build:
+      context: ../user-gui
+    ports: 
+      - 8000:8000
+    working_dir: /user-gui
+    command: http-server ./dist/user-gui/ -p 8000 --cors
+  nginx:
+    image: nginx:alpine
+    restart: always
+    ports:
+      - "80:8080"
+      - "443:443"
+    volumes:
+      - ./app.conf:/etc/nginx/conf.d/app.conf
+    depends_on:
+      - postgres
+      - user-api
